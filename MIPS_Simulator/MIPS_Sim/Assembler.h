@@ -15,89 +15,89 @@ bool* Assembler(std::string userInput) { // Assembler to convert raw string to i
 	}
 	for (int z = 0; z < 5; z++)
 		cout << str[z];
-	if (str[0] == "add") // Funct = 20, Opcode = 0
+	if (str[0] == "add") // Funct = 100000, Opcode = 000000
 		instruction[5] = 1;
-	if (str[0] == "addi") // Opcode = 8
+	if (str[0] == "addi") // Opcode = 001000
 		instruction[29] = 1;
 	
-	if (str[0] == "and") { // Opcode = 0, Funct = 24
+	if (str[0] == "and") { // Opcode = 000000, Funct = 100100
 		instruction[4] = 1;
 		instruction[3] = 1;
 	}
-	if (str[0] == "andi") { // Opcode = c
+	if (str[0] == "andi") { // Opcode = 001100
 		instruction[29] = 1;
 		instruction[28] = 1;
 	}
-	if (str[0] == "beq") // Opcode = 4
+	if (str[0] == "beq") // Opcode = 000100
 		instruction[28] = 1;
-	if (str[0] == "bne") { // Opcode = 5
+	if (str[0] == "bne") { // Opcode = 000101
 		instruction[28] = 1;
 		instruction[26] = 1;
 	}
-	if (str[0] == "lbu") // Opcode = 24
+	if (str[0] == "lbu") // Opcode = 100100
 		instruction[30] = 1;
 
-	if (str[0] == "lhu") {// Opcode = 25
+	if (str[0] == "lhu") {// Opcode = 100101
 		instruction[31] = 1;
 		instruction[28] = 1;
 		instruction[26] = 1;
 	}
-	if (str[0] == "ll") { // Opcode = 30
+	if (str[0] == "ll") { // Opcode = 110000
 		instruction[31] = 1;
 		instruction[30] = 1;
 	}
 	
-	if (str[0] == "lw") {// Opcode = 23
+	if (str[0] == "lw") {// Opcode = 100011
 		instruction[26] = 1;
 		instruction[27] = 1;
 		instruction[26] = 1;
 	}
-	if (str[0] == "nor") { // Opcode = 0, Funct = 27
+	if (str[0] == "nor") { // Opcode = 000000, Funct = 100111
 		instruction[4] = 1;
 		instruction[3] = 1;
 		instruction[1] = 1;
 		instruction[0] = 1;
 	}
-	if (str[0] == "or") { //Opcode = 0, Funct = 25
+	if (str[0] == "or") { //Opcode = 000000, Funct = 100101
 		instruction[4] = 1;
 		instruction[3] = 1;
 		instruction[0] = 1;
 	}
-	if (str[0] == "ori") { // Opcode = d
+	if (str[0] == "ori") { // Opcode = 001101
 		instruction[29] = 1;
 		instruction[28] = 1;
 		instruction[26] = 1;
 	}
-	if (str[0] == "slt") { // Opcode = 0, Funct = 2a
+	if (str[0] == "slt") { // Opcode = 000000, Funct = 101010 Set Less Than
 		instruction[5] = 1;
 		instruction[3] = 1;
 		instruction[1] = 1;
 	}
-	if (str[0] == "slti") { // Opcode = a
+	if (str[0] == "slti") { // Opcode = a Set Less Than Immediate
 		instruction[3] = 1;
 		instruction[1] = 1;
 	}
 	
 
-	if (str[0] == "sll") { // Opcode = 0,
+	if (str[0] == "sll") { // Opcode = 0, Funct = 0
 		instruction[31] = 1;
 		instruction[29] = 1;
 		instruction[27] = 1;
 	}
-	if (str[0] == "srl") { //Opcode = a
+	if (str[0] == "srl") { //Opcode = 0, Funct = 2
 		instruction[29] = 1;
 		instruction[27] = 1;
 	}
-	if (str[0] == "sb") {// Opcode = b
+	if (str[0] == "sb") {// Opcode = 28
 		instruction[31] = 1;
 		instruction[29] = 1;
 	}
-	if (str[0] == "sc") {// Opcode = 0  Funct = 
+	if (str[0] == "sc") {// Opcode = 38  Funct = 
 		instruction[31] = 1;
 		instruction[30] = 1;
 		instruction[29] = 1;
 	}
-	if (str[0] == "sh") {//Store HalfWord
+	if (str[0] == "sh") {//Store HalfWord Opcode = 29
 		instruction[31] = 1;
 		instruction[29] = 1;
 		instruction[26] = 1;
