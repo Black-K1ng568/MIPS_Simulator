@@ -34,18 +34,8 @@ bool* Assembler(std::string userInput) { // Assembler to convert raw string to i
 		instruction[28] = 1;
 		instruction[26] = 1;
 	}
-	if (str[0] == "lbu") // Opcode = 100100
-		instruction[30] = 1;
-
-	if (str[0] == "lhu") {// Opcode = 100101
-		instruction[31] = 1;
-		instruction[28] = 1;
-		instruction[26] = 1;
-	}
-	if (str[0] == "ll") { // Opcode = 110000
-		instruction[31] = 1;
-		instruction[30] = 1;
-	}
+	
+	
 	
 	if (str[0] == "lw") {// Opcode = 100011
 		instruction[26] = 1;
@@ -88,20 +78,8 @@ bool* Assembler(std::string userInput) { // Assembler to convert raw string to i
 		instruction[29] = 1;
 		instruction[27] = 1;
 	}
-	if (str[0] == "sb") {// Opcode = 28
-		instruction[31] = 1;
-		instruction[29] = 1;
-	}
-	if (str[0] == "sc") {// Opcode = 38  Funct = 
-		instruction[31] = 1;
-		instruction[30] = 1;
-		instruction[29] = 1;
-	}
-	if (str[0] == "sh") {//Store HalfWord Opcode = 29
-		instruction[31] = 1;
-		instruction[29] = 1;
-		instruction[26] = 1;
-	}
+
+	
 	if (str[0] == "sw") {//Store Word 2b
 		instruction[31] = 1;
 		instruction[29] = 1;
@@ -111,6 +89,9 @@ bool* Assembler(std::string userInput) { // Assembler to convert raw string to i
 	}
 	if (str[0] == "sub") {//Subtract 22
 		instruction[31] = 1;
+		instruction[27] = 1;
+	}
+	if (str[0] == "j") {// Jump Opcode = 000010
 		instruction[27] = 1;
 	}
 	

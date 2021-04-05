@@ -2,37 +2,17 @@
 class Control
 {
 public:
-	void recieveInstruction(bool* opcode);
+	void recieveInstruction(bool* opcode, bool* instruction);
+	
 	void sendData();
-	int add(); // Opcode = 000000, Funct = 
-	int addi(); // Opcode = 001000
-	int andInstruction(); // Opcode =  000000
-	int andi(); // Opcode  = 001100
-	int beq(); // Opcode = 000100 Branch If Equal
-	int bne(); // Opcode = 000101 Branch If not equal
-	int lbu(); // Opcode = 100100 Load Byte Unsigned
-	int lhu(); // Opcode = 100101 Load Half Word Unsigned
-	int ll(); // Opcode  = 110000 Load Linked
-	int lw(); // Opcode = 100011 Load Word
-	int nor(); // Opcode = 000000
-	int orInstruction(); // Opcode = 000000
-	int ori(); // Opcode = 001101
-	int slt(); // Opcode = 000000
-	int slti(); // Opcode = 001010
-	int sll(); // Opcode = 000000 Shift Left Logical
-	int srl(); // Opcode = 000000 Shift Right Logical
-	int sb(); // Opcode = 001011
-	int sc(); // Opcode = 111000 Store Conditional
-	int sh(); // Opcode = 101001
-	int sw(); // Opcode = 101011
-	int sub(); // Opcode = 100010
+	bool setPCWriteTrue();
 
 private:
 	bool regDst;
 	bool branch;
 	bool memRead;
-	bool aluOp;
-	bool pcSource;
+	bool aluOp[2] = {0};
+	bool pcSource[2] = { 0 };
 	bool regWrite;
 	bool pcWriteControl;
 	bool pcWrite;
@@ -42,7 +22,28 @@ private:
 	bool memToReg;
 	bool irWrite;
 	bool aluSrcA;
-	bool aluSrcB;
+	bool aluSrcB[2] = { 0, 1 }; // Default for PC calculation
+	bool add[6] = { 1,0,0,0,0,0}; // Funct = 20
+	bool addi[6] = { 0,0,1,0,0,0 };
+	bool andInstruction[6] = { 1,0,0,1,0,0 }; // Funct = 24
+	bool andi[6] = { 0,0,1,1,0,0 };
+	bool beq[6] = { 0,0,0,1,0,0 };
+	bool bne[6] = { 0,0,0,1,0,1 };
+	bool ll[6] = { 1,1,0,0,0,0 };
+	bool lw[6] = { 1,0,0,0,1,1 };
+	bool nor[6] = { 1,0,0,1,1,1 }; // Funct = 27
+	bool orInstruction[6]= { 1,0,0,1,0,1 }; // Funct = 25
+	bool ori[6] = { 0,0,1,1,0,1 };
+	bool slt[6] = { 1,0,1,0,1,0 }; // Funct = 2a
+	bool slti[6] = { 0,0,1,0,1,0 };
+	bool sll[6] = { 0,0,0,0,0,0 }; // Funct = 0
+	bool srl[6] = { 0,0,0,0,1,0 }; // Funct  = 2
+	bool sb[6] = { 0,0,1,0,1,1 };
+	bool sc[6] = { 1,1,1,0,0,0 };
+	bool sh[6] = { 1,0,1,0,0,1 };
+	bool sw[6] = { 1,0,1,0,1,1 };
+	bool sub[6] = { 1, 0,0,0,1,0 };
+	bool j[6] = { 0,0,0,0,1,0 };
 
 
 };

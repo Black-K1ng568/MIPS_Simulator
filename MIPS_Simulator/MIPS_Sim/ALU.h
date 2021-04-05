@@ -5,10 +5,15 @@ public:
 	void readInstruction(bool* instruction);
 	bool* add();
 	bool* subtract();
+	bool* addi();
+	bool* andInstruction();
+
+
 
 private:
-	bool opcode[2];
-	bool data1[32];
-	bool data2[32];
+	bool opcode[6];
+	bool dataA[32];
+	bool dataB[32];
+	bool aluResult[32];
 };
 
