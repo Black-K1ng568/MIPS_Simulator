@@ -29,7 +29,7 @@ private:
 	bool andi[6] = { 0,0,1,1,0,0 };
 	bool beq[6] = { 0,0,0,1,0,0 };
 	bool bne[6] = { 0,0,0,1,0,1 };
-	bool ll[6] = { 1,1,0,0,0,0 };
+	
 	bool lw[6] = { 1,0,0,0,1,1 };
 	bool nor[6] = { 1,0,0,1,1,1 }; // Funct = 27
 	bool orInstruction[6]= { 1,0,0,1,0,1 }; // Funct = 25
@@ -38,9 +38,7 @@ private:
 	bool slti[6] = { 0,0,1,0,1,0 };
 	bool sll[6] = { 0,0,0,0,0,0 }; // Funct = 0
 	bool srl[6] = { 0,0,0,0,1,0 }; // Funct  = 2
-	bool sb[6] = { 0,0,1,0,1,1 };
-	bool sc[6] = { 1,1,1,0,0,0 };
-	bool sh[6] = { 1,0,1,0,0,1 };
+	
 	bool sw[6] = { 1,0,1,0,1,1 };
 	bool sub[6] = { 1, 0,0,0,1,0 };
 	bool j[6] = { 0,0,0,0,1,0 };

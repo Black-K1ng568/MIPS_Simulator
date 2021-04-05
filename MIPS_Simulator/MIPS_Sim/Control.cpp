@@ -33,7 +33,7 @@ void Control::recieveInstruction(bool* opcode, bool* instruction) {
 		if (compareArray(instruction, orInstruction)) {
 			aluOp[0] = 1; // Alu Op = 10, determined by funct
 			aluSrcA = 1;
-			aluSrcB[1] = 0 // Alu Src B  = 00, R type Instruction
+			aluSrcB[1] = 0; // Alu Src B  = 00, R type Instruction
 		}
 		if (compareArray(instruction, slt)) {
 			aluOp[0] = 1;
@@ -132,16 +132,16 @@ void Control::recieveInstruction(bool* opcode, bool* instruction) {
 void Control::sendData() { // Returns Data
 
 }
-bool compareArray(bool* opcode, bool* array) {
+bool compareArrayx6(bool* opcode, bool* array) {
 	int z = 0;
 	for (int i = 0; i < 6; i++) {
 		if (opcode[i] == array[i])
 			z++;
 	}
-	if (z == 5)
-		return 0;
+	if (z == 6)
+		return 1;// True if arrays are equal
 	else {
-		return 1;
+		return 0;
 	}
 }
 

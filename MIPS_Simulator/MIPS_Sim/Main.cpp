@@ -7,6 +7,7 @@
 #include "ALU.h"
 #include "Control.h"
 
+// Send Boolean arrays as integers to demonstrate register interactions
 bool* Assembler(std::string userInput);
 bool* initRegister(std::string reg);
 using namespace std;
