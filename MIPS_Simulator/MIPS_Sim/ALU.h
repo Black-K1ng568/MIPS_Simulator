@@ -2,7 +2,7 @@
 class ALU
 {
 public:
-	void readALUop(bool* operation, bool* opcode );
+	void readALUop(bool* operation, bool* opcode, int constant );
 	int outputResult();
 	void setdataA(bool* A);
 	void setdataB(bool* B);
@@ -31,8 +31,8 @@ public:
 
 private:
 	int funct;
-	bool dataA[32];
-	bool dataB[32];
+	bool dataA[32]; // Input 1
+	bool dataB[32]; // Input 2
 	bool aluResult[32];
 	bool add[2] = { 0 };
 	bool sub[2] = { 0, 1 };
@@ -45,6 +45,7 @@ private:
 	bool slti[6] = { 0,0,1,0,1,0 };
 	bool sll[6] = { 0,0,0,0,0,0 }; // Funct = 0
 	bool srl[6] = { 0,0,0,0,1,0 }; // Funct  = 2
-
+	int overflow;
+	int shamt;
 };
 

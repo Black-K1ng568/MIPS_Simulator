@@ -1,7 +1,7 @@
 #include "ALU.h"
-void ALU::readALUop(bool* operation, bool* opcode) {
+void ALU::readALUop(bool* operation, bool* opcode, int constant) {
 	if (compareArrayx2(operation, add)) {
-		
+		ADD()
 	}
 	if (compareArrayx2(operation, sub)) {
 
@@ -21,49 +21,68 @@ int ALU::outputResult() {
 
 }
 void ALU::ADD() {
-	int overflow;
+	
 	int carry;
 	for (int i = 0; i < 32; i++) {
-		if (((dataA[i]  && dataB[i]) == 1)  &(carry == 1)) {
+		if (((dataA[i]  && dataB[i]) == 1)  && (carry == 1)) {
 			aluResult[i] = 1;
 			carry = 1;
 		}	
 		
-		if (((dataA[i] && dataB[i]) == 1) & (carry == 0)) {
+		if (((dataA[i] && dataB[i]) == 1) && (carry == 0)) {
 			aluResult[i] = 0;
 			carry = 0;
 		}
-		if (((dataA[i] ^ dataB[i]) == 1) & (carry == 0))  {
+		if (((dataA[i] ^ dataB[i]) == 1) && (carry == 0))  {
 			aluResult[i] = 1;
 			carry = 0;
 		}
-		if (((dataA[i] ^ dataB[i]) == 1) & (carry == 1)) {
+		if (((dataA[i] ^ dataB[i]) == 1) && (carry == 1)) {
 			aluResult[i] = 0;
 			carry = 1;
 		}
-		if (())
-
+		if (((dataA[i] == 0) && (dataB[i] == 0)) && (carry == 0)) {
+			aluResult[i] = 0;
+			carry = 0;
+		}
+		if (((dataA[i] == 0) && (dataB[i] == 0)) && (carry == 1)) {
+			aluResult[i] = 1;
+			carry = 0;
+		}
 	}
-
+	overflow = carry;
 }
 void ALU::AND() {
+	for (int i = 0; i < 32; i++) {
+		aluResult[i] = dataA[i] & dataB[i];
+	}
 
 
 }
 void ALU::NOR() {
+	for (int i = 0; i < 32; i++) {
+		aluResult[i] = !(dataA[i] | dataB[i]);
+	}
 
 }
 
 void ALU::OR() {
-
+	for (int i = 0; i < 32; i++) {
+		aluResult[i] = dataA[i] | dataB[i];
+	}
 }
 
 void ALU::ORI() {
-
+	for (int i = 0; i < 32; i++) {
+		aluResult[i] = dataA[i] & dataB[i];
+	}
+	
 }
 
 void ALU::SLL() {
-
+	for (int i = 0; i < 32; i++) {
+		aluResult[i] = dataA[i] << shamt;
+	}
 }
 
 void ALU::SLT() {
@@ -106,5 +125,15 @@ bool compareArrayx6(bool* opcode, bool* array) {
 		return 1;// True if arrays are equal
 	else {
 		return 0;
+	}
+}
+int booltoInteger(bool* array) {
+	int value;
+
+	for (int i = 31; i = 0; i--) {
+		if (array[i] == 1) {
+			value = 1 << i;
+		}
+		
 	}
 }
