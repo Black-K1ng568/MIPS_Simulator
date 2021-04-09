@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <unordered_map>
 class Memory
 {
 public:
@@ -16,7 +17,8 @@ public:
 
 
 private:
-	uint32_t memory[32];
+	std::unordered_map<uint32_t, std::string> memory; // Using unordered Maps to stroe data in similar situations
 	uint32_t address;
+
 };
 
