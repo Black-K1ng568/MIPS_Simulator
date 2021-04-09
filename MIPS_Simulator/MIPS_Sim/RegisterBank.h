@@ -3,7 +3,9 @@ class RegisterBank
 {
 public:
 	void recieveInstruction(bool* instruction);
-
+	int read1(bool* source1);
+	int read2(bool* source2);
+	void writeRegister(bool* dst, bool write);
 
 private:
 	bool* r0[32] = { 0 };
@@ -38,7 +40,7 @@ private:
 	bool* r29[32] = { 0 };
 	bool* r30[32] = { 0 };
 	bool* r31[32] = { 0 };
-
+	bool regWrite;
 
 
 };

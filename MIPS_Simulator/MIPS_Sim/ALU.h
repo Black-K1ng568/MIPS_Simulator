@@ -6,6 +6,7 @@ public:
 	int outputResult();
 	void setdataA(bool* A);
 	void setdataB(bool* B);
+	void resetValues();
 	void ADDI();
 	void ANDI();
 	void BEQ();
@@ -32,8 +33,11 @@ public:
 private:
 	int funct;
 	bool dataA[32]; // Input 1
+	int intdataA = 0; //Integer form of input 1
+	int intdataB = 0; // Integer form of input 2
 	bool dataB[32]; // Input 2
 	bool aluResult[32];
+	int output = 0;
 	bool add[2] = { 0 };
 	bool sub[2] = { 0, 1 };
 	bool extend[2] = { 1,0 };

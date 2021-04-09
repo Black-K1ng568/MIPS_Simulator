@@ -1,15 +1,30 @@
 #pragma once
+#include <chrono>
 class Control
 {
 public:
 	void recieveInstruction(bool* opcode, bool* instruction);
 	
-	void sendData();
+	
+	bool* getPCSource();
+	bool getregDst();
+	bool* getAluSrcB();
+
+	bool getMemRead();
+	bool* getaluOp();
+	bool getPCWriteControl();
+	bool getPCWrite();
+	bool getMemWrite();
+	bool getMemToReg();
+	bool getIRWrite();
+	bool getIorD();
+	bool getAluSrcA();
 	bool setPCWriteTrue();
+	bool compareArrayx6(bool* opcode, bool* array);
 
 private:
 	bool regDst;
-	bool branch;
+	
 	bool memRead;
 	bool aluOp[2] = {0};
 	bool pcSource[2] = { 0 };
@@ -22,6 +37,10 @@ private:
 	bool memToReg;
 	bool irWrite;
 	bool aluSrcA;
+
+
+
+	//Used for comparisons
 	bool aluSrcB[2] = { 0, 1 }; // Default for PC calculation
 	bool add[6] = { 1,0,0,0,0,0}; // Funct = 20
 	bool addi[6] = { 0,0,1,0,0,0 };

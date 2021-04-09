@@ -1,20 +1,22 @@
 #pragma once
-#
+#include <string>
 class Memory
 {
 public:
-	bool* readData()
-	void compareInstruction();
-	initRegisters();
+	void readAddress(int address);
 
+	void storeTextInstruction(std::string input, uint32_t num);
+	int getInstruction();
+	int getNumOfInstructions();
+	void storeWord();
+	bool* loadWord();
 
 
 
 
 
 private:
-	static bool* add[32] = { 0 };
-
-
+	uint32_t memory[32];
+	uint32_t address;
 };
 

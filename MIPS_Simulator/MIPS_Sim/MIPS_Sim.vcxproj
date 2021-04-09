@@ -150,11 +150,6 @@
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Register.cpp" />
     <ClCompile Include="RegisterBank.cpp" />
-    <ClCompile Include="ResultStoreRegister.cpp" />
-    <ClCompile Include="ReturnAddressRegister.cpp" />
-    <ClCompile Include="SavedStoreRegister.cpp" />
-    <ClCompile Include="StackPointer.cpp" />
-    <ClCompile Include="TemporaryStoreRegister.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ALU.h" />
