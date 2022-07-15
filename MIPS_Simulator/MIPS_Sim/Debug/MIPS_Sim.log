@@ -1,2 +1,62 @@
-﻿  Main.cpp
-D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Main.cpp(32): error C4716: 'Assembler': must return a value
+﻿  ALU.cpp
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.h(21,11): error C2535: 'void ALU::OR(void)': member function already defined or declared
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.h(19): message : see declaration of 'ALU::OR'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(3,13): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(4,13): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(5,6): error C3861: 'compareArrayx2': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(7,2): error C2143: syntax error: missing ';' before '}'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(8,6): error C3861: 'compareArrayx2': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(11,6): error C3861: 'compareArrayx2': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(12,7): error C3861: 'compareArrayx6': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(15,7): error C3861: 'compareArrayx6': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(18,7): error C3861: 'compareArrayx6': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(44,11): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(51,11): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(58,11): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(65,11): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(69,11): warning C4552: '<<': result of expression not used
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(76,11): error C3861: 'booltoInteger': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.cpp(87,11): warning C4552: '>>': result of expression not used
+  ArgumentStoreRegister.cpp
+  AtRegister.cpp
+  Control.cpp
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Control.h(35,7): error C2086: 'bool Control::memRead': redefinition
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Control.h(28): message : see declaration of 'Control::memRead'
+  FramePointer.cpp
+  GlobalPointer.cpp
+  InstructionMemory.cpp
+  Main.cpp
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(5,2): error C2065: 'istringstream': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(5,16): error C2146: syntax error: missing ';' before identifier 'ss'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(5,16): error C3861: 'ss': identifier not found
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(12,9): error C2065: 'ss': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(17,3): error C2065: 'cout': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(99,3): error C2065: 'cerr': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(107,23): error C2065: 'string': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(107,30): error C2146: syntax error: missing ')' before identifier 'destination'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(107,84): error C2143: syntax error: missing ';' before '{'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(107,84): error C2447: '{': missing function header (old-style formal list?)
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(126,28): error C2065: 'string': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(126,35): error C2146: syntax error: missing ')' before identifier 'destination'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(126,80): error C2143: syntax error: missing ';' before '{'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(126,80): error C2447: '{': missing function header (old-style formal list?)
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(141,21): error C2065: 'string': undeclared identifier
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(141,28): error C2146: syntax error: missing ')' before identifier 'reg'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(141,33): error C2143: syntax error: missing ';' before '{'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Assembler.h(141,33): error C2447: '{': missing function header (old-style formal list?)
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.h(21,11): error C2535: 'void ALU::OR(void)': member function already defined or declared
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\ALU.h(19): message : see declaration of 'ALU::OR'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Control.h(35,7): error C2086: 'bool Control::memRead': redefinition
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Control.h(28): message : see declaration of 'Control::memRead'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Main.cpp(44,30): error C2660: 'Control::recieveInstruction': function does not take 0 arguments
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Control.h(6,7): message : see declaration of 'Control::recieveInstruction'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Main.cpp(45,3): error C2143: syntax error: missing ';' before 'if'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Main.cpp(68,2): error C2059: syntax error: '}'
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Main.cpp(42): fatal error C1075: '{': no matching token found
+  Memory.cpp
+  Register.cpp
+  RegisterBank.cpp
+  Generating Code...
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Memory.cpp(10): error C4716: 'Memory::getNumOfInstructions': must return a value
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Memory.cpp(5): error C4716: 'Memory::getInstruction': must return a value
+D:\source\repos\MIPS_Simulator\MIPS_Simulator\MIPS_Sim\Memory.cpp(18): error C4716: 'Memory::loadWord': must return a value

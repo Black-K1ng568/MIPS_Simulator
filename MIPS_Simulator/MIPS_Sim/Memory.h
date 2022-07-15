@@ -7,7 +7,7 @@ public:
 	void readAddress(int address);
 
 	void storeTextInstruction(std::string input, uint32_t num);
-	int getInstruction();
+	int getAddress(bool *PC);
 	int getNumOfInstructions();
 	void storeWord();
 	bool* loadWord();
@@ -17,8 +17,10 @@ public:
 
 
 private:
-	std::unordered_map<uint32_t, std::string> memory; // Using unordered Maps to stroe data in similar situations
+	std::unordered_map<uint32_t, std::string> memory; // Using unordered Maps to store data in similar situations 
 	uint32_t address;
+	bool memRead;
+	bool memWrite;
 
 };
 

@@ -1,6 +1,6 @@
 #include "Memory.h"
 
-int Memory::getInstruction() {
+int Memory::getAddress(bool *PC) {
 	
 }
 

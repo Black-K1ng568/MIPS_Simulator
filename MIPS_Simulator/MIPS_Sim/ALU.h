@@ -2,11 +2,20 @@
 class ALU
 {
 public:
-	void readALUop(bool* operation, bool* opcode, int constant );
-	int outputResult();
-	void setdataA(bool* A);
-	void setdataB(bool* B);
+	ALU(bool aluOp[], size_t size1, bool funct[], size_t size2);
+	ALU(bool AluOp[], size_t size);
+	ALU(bool aluOp[], size_t size1, bool funct[], size_t size2, bool regA[], size_t size3, bool regB[], size_t size4);
+	void readALU();
+	bool* outputResult();
+	void setdataA(bool A[], size_t size );
+	void setdata(bool A[], size_t size1, bool B[], size_t size2 );
 	void resetValues();
+	
+
+	bool* getdataA();//Test Purposes
+	bool* getdataB(); // Test purposes
+	
+protected:
 	void ADDI();
 	void ANDI();
 	void BEQ();
@@ -25,21 +34,22 @@ public:
 	void SLL();
 	void SRL();
 
-	bool* getdataA();//Test Purposes
-	bool* getdataB(); // Test purposes
-	
-
-
 private:
-	int funct;
-	bool dataA[32]; // Input 1
-	int intdataA = 0; //Integer form of input 1
-	int intdataB = 0; // Integer form of input 2
-	bool dataB[32]; // Input 2
-	bool aluResult[32];
-	int output = 0;
-	bool add[2] = { 0 };
-	bool sub[2] = { 0, 1 };
+	bool funct[6] = { 0 };
+	bool aluOp[2] = { 0 };
+	bool zeroOp[2] = { 0 };
+	bool beqOp[2] = { 0, 1 };
+	bool rOp[2] = { 1, 0 };
+
+	bool dataA[32] = { 0 }; // Input 1
+	bool dataB[32] = { 0 }; // Input 2
+	bool output[32] = { 0 }; //If not extended
+	bool outputAddress[32] = { 0 }; //If extended i.e. address
+	bool add[4] = { 0, 0, 1, 0 };
+	bool sub[4] = { 0, 1, 1, 0 };
+	bool andControl[4] = { 0, 0, 0, 0 };
+	bool orControl[4] = {0,0,0, 1};
+	bool setllt[4] = { 0, 1,1,1 };
 	bool extend[2] = { 1,0 };
 	bool andInstruction[6] = { 1,0,0,1,0,0 };
 	bool nor[6] = { 1,0,0,1,1,1 }; // Funct = 27
@@ -51,5 +61,7 @@ private:
 	bool srl[6] = { 0,0,0,0,1,0 }; // Funct  = 2
 	int overflow;
 	int shamt;
+	bool aluControl[4];
+
 };
 
